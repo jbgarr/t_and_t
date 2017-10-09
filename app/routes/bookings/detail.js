@@ -112,7 +112,6 @@ export default Ember.Route.extend({
     ],
 
     model(params) {
-        console.log(this.bookings, params.booking_number)
         // return this.get('store').findRecord('booking', params.booking_number);
         let filtered = this.bookings.filter(b => {
             return b.booking_number === params.booking_number;
