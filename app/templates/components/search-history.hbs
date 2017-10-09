@@ -1,0 +1,16 @@
+ {{#if searchHistory.bookings}}
+    <div class="margin-B-6 clearfix">
+        <span>Search History</span>
+        <button class="btn btn-xs btn-danger pull-right" {{action "clearHistory"}}>
+            Clear All
+        </button>
+    </div>
+{{/if}}
+<ul class="list-unstyled">
+  {{#each searchHistory.bookings as |booking|}}
+    <li>
+      {{#link-to "bookings.detail" booking}}{{booking.booking_number}}{{/link-to}}
+      <span class="glyphicon glyphicon-remove-sign text-danger clickable pull-right" {{action "removeFromHistory" booking}}></span>
+    </li>
+  {{/each}}
+</ul>

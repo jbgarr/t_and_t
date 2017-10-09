@@ -1,0 +1,15 @@
+<div class="side-nav">
+    <form class="form-inline">
+        <label for="bookingSearch">Search by Booking Number:</label>
+        <div class="input-group">
+            {{input value=query class="form-control" id="bookingSearch" placeholder="B/L number"}}
+            <span class="input-group-btn">
+                <button class="btn btn-default" {{action 'navigateToDetail'}} disabled={{searchIsDisabled}}>Search</button>
+            </span>
+        </div>
+    </form>
+    {{search-history}}
+</div>
+<div class="main">
+    {{outlet}}
+</div>

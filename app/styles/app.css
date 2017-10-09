@@ -1,0 +1,83 @@
+/* General */
+.clickable {
+    cursor: pointer;
+}
+
+.text-danger.clickable {
+    color: rgb(217, 83, 79);
+}
+
+.text-danger.clickable:hover {
+    color: rgb(201, 48, 44);
+}
+
+.margin-B-6 {
+    margin-bottom: 6px;
+}
+
+.margin-B-12 {
+    margin-bottom: 12px;
+}
+
+ul .columns-2 {
+    columns: 2;
+}
+
+/* Layout */
+html, body,
+.ember-application > .ember-view,
+.app-Wrap {
+    height: 100%;
+}
+
+.app-Wrap {
+    position: relative;
+}
+
+.side-nav {
+    float: left;
+    width: 250px;
+    padding: 12px;
+    background-color: rgb(240, 240, 240);
+    position: absolute;
+    bottom: 0;
+    top: 56px;
+}
+
+.main {
+    margin-left: 264px;
+    top: 56px;
+    bottom: 0;
+    left: 250px;
+}
+
+.search-history {
+    margin-top: 12px;
+}
+
+/* booking-detail */
+
+.container-history-item {
+    position: relative;
+    border: 1px solid rgb(230, 230, 230);
+    padding: 12px;
+    background: white;
+}
+
+.container-history-item:not(:last-child) {
+    border-bottom: none !important;
+}
+
+.container-history-item::before {
+    content: '';
+    display: block;
+    height: 16px;
+    width: 16px;
+    border: 1px solid rgb(230, 230, 230);
+    border-radius: 50%;
+    position: absolute;
+    left: -8px;
+    top: 50%;
+    margin-top: -8px;
+    background-color: rgb(255, 255, 255);
+}

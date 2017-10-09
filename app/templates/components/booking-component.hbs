@@ -1,0 +1,45 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title clearfix">
+            Details for {{booking.booking_number}}
+            <button class="pull-right btn btn-xs btn-success" {{action 'saveToSearchHistory'}}>Save</button>
+        </h3>
+    </div>
+    <div class="panel-body">
+        <ul class="list-unstyled">
+            <li>
+                <b>B/L Number:</b> {{booking.booking_number}}
+            </li>
+            <li>
+                <b>Steamship Line:</b> {{booking.steamship_line}}
+            </li>
+            <li>
+                <b>Origin:</b> {{booking.origin}}
+            </li>
+            <li>
+                <b>Destination:</b> {{booking.destination}}
+            </li>
+        </ul>
+    </div>
+</div>
+
+{{#if booking.containers}}
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title clearfix">
+                Containers
+            </h3>
+        </div>
+        <div class="panel-body">
+            <ul class="list-unstyled">
+                {{#each booking.containers as |containerItem|}}
+                    <li>{{container-component container=containerItem}}</li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+    {{else}}
+    <div class="alert alert-info">
+        There are no containers associated with this booking.
+    </div>
+{{/if}}

@@ -1,0 +1,11 @@
+Container History
+{{#each updates as |update|}}
+    <ul class="columns-2 list-unstyled container-history-item">
+        <li><b>Delivery On:</b> {{update.delivery_on}}</li>
+        <li><b>Destination:</b> {{update.destination}}</li>
+        <li><b>Vessel:</b> {{update.vessel}}</li>
+        <li><b>Vessel ETA:</b> {{update.vessel_eta}}</li>
+        <li><b>Voyage:</b> {{update.voyage}}</li>
+        <li><b>Steamship Line:</b> {{update.steamship_line}}</li>
+    </ul>
+{{/each}}

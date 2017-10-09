@@ -1,0 +1,28 @@
+<div>
+    <ul class="columns-2 list-unstyled margin-B-6">
+        <li><b>Number:</b> {{container.number}}</li>
+        <li><b>Size:</b> {{container.size}}</li>
+        <li><b>Type:</b> {{container.type}}</li>
+        <li><b>Current Location:</b> {{container.location}}</li>
+        <li><b>Last Status At:</b> {{container.last_status_at}}</li>
+        <li><b>Last Status:</b> {{container.last_status}}</li>
+    </ul>
+    <button class="btn btn-xs btn-primary" {{action 'toggleHistory'}}>
+        {{#if showHistory}}
+            Hide
+            {{else}}
+            View
+        {{/if}} History
+    </button>
+
+    {{#if showHistory}}
+        <hr>
+        {{#if container.updates}}
+            {{container-history updates=container.updates}}
+        {{else}}
+        <div class="alert alert-info">
+            There is no history available for this container.
+        </div>
+        {{/if}}
+    {{/if}}
+</div>
